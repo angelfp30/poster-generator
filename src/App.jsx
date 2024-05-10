@@ -34,9 +34,8 @@ function App() {
 
     const albumID = await fetch('https://api.spotify.com/v1/search?q=' + searchInput + '&type=album', searchParameters)
      .then(response => response.json())
-     .then(data => {return data.albums.items[0].id})
+     .then(data => console.log(data))
 
-    console.log(albumID)
   }
 
   return (
